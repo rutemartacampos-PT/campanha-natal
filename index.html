@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Natal – Oferta Especial</title>
+
 <style>
     body {
         font-family: "Century Gothic", Arial, sans-serif;
@@ -12,26 +13,26 @@
         background: #f7f7f7;
         color: #333;
     }
+
     .hero {
         background-color: #00535B;
         color: white;
         text-align: center;
         padding: 60px 20px;
     }
-    .hero img {
-        max-width: 200px;
-        margin-bottom: 20px;
-    }
+
     .hero h1 {
         font-size: 3rem;
         margin-bottom: 10px;
     }
+
     .hero p {
         font-size: 1.4rem;
         margin-bottom: 20px;
     }
+
     .btn-primary {
-        background: #fff;
+        background: #ffffff;
         color: #00535B;
         padding: 15px 30px;
         font-size: 1.2rem;
@@ -40,11 +41,18 @@
         cursor: pointer;
         text-decoration: none;
         font-weight: bold;
+        display: inline-block;
     }
+
+    .btn-primary:hover {
+        background: #e6e6e6;
+    }
+
     .section {
         padding: 40px 20px;
         text-align: center;
     }
+
     .benefits {
         display: flex;
         justify-content: center;
@@ -52,6 +60,7 @@
         flex-wrap: wrap;
         margin-top: 20px;
     }
+
     .benefit-card {
         background: white;
         padding: 20px;
@@ -59,9 +68,11 @@
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+
     .benefit-card h3 {
         color: #00535B;
     }
+
     footer {
         background: #00535B;
         color: white;
@@ -70,16 +81,17 @@
     }
 </style>
 </head>
+
 <body>
 
-<!-- Hero -->
+<!-- HERO -->
 <section class="hero">
     <h1>Neste Natal Temos um Presente Para Si!</h1>
     <p>Oferta especial para a nossa comunidade de parceiros 🎁</p>
     <a href="#cta" class="btn-primary">Quero a Minha Oferta!</a>
 </section>
 
-<!-- About Campaign -->
+<!-- COMO FUNCIONA -->
 <section class="section">
     <h2>Como Funciona?</h2>
     <p>Adquira <strong>2 licenças anuais</strong> e receba <strong>1 hardware totalmente grátis!</strong></p>
@@ -89,10 +101,12 @@
             <h3>✔️ Licenças Anuais</h3>
             <p>Obtenha duas licenças com valor especial nesta campanha.</p>
         </div>
+
         <div class="benefit-card">
             <h3>🎁 Hardware de Presente</h3>
             <p>Receba um hardware grátis como agradecimento pela sua confiança.</p>
         </div>
+
         <div class="benefit-card">
             <h3>⚡ Exclusivo para Parceiros</h3>
             <p>Oferta válida apenas para membros da comunidade de parceiros.</p>
@@ -104,7 +118,16 @@
 <section id="cta" class="section" style="background:#eafef1;">
     <h2>Comece Agora!</h2>
     <p>Não perca esta oportunidade especial de Natal.</p>
-    <a href="mailto:comercial@opalaconsult.com" class="btn-primary">Adquirir Licenças</a>
+
+    <!-- BOTÃO COM EMAIL FUNCIONAL -->
+    <a
+      href="mailto:comercial@opalaconsult.com
+      ?subject=Campanha%20de%20Natal
+      &body=Olá,%0D%0A%0D%0APretendo%20adquirir%202%20licenças%20PT-MOBILE%20no%20âmbito%20da%20Campanha%20de%20Natal.%0D%0A%0D%0AObrigado."
+      class="btn-primary">
+      Adquirir Licenças
+    </a>
+
     <p style="margin-top: 10px; font-size: 0.9rem; color: #555;">
         Oferta válida por tempo limitado.
     </p>
@@ -113,18 +136,21 @@
 <!-- FAQ -->
 <section class="section">
     <h2>Perguntas Frequentes</h2>
-    <p><strong>Quem pode participar?</strong> <br>Todos os parceiros registados.</p>
-    <p><strong>Como recebo o hardware?</strong> <br> No email de encomenda das 2 licenças colocar no assunto: campanha de natal</p>
-    <p><strong>Há custos adicionais?</strong> <br>Não — o hardware é totalmente gratuito com a compra das licenças.</p>
+
+    <p><strong>Quem pode participar?</strong><br>
+    Todos os parceiros registados.</p>
+
+    <p><strong>Como recebo o hardware?</strong><br>
+    No email de encomenda das 2 licenças, colocar no assunto: <strong>Campanha de Natal</strong>.</p>
+
+    <p><strong>Há custos adicionais?</strong><br>
+    Não — o hardware é totalmente gratuito com a compra das licenças.</p>
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
     <p>&copy; 2025 Campanha de Natal • Todos os direitos reservados</p>
 </footer>
 
 </body>
 </html>
-
-
-
