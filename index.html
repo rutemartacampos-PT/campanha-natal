@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Campanha Mobilidade – Reis Magos 2026</title>
+
   <style>
     body {
       font-family: "Century Gothic", Arial, sans-serif;
@@ -12,20 +13,63 @@
       background: #f7f7f7;
       color: #333;
     }
+
+    /* ================= HERO ================= */
+
     .hero {
       background-color: #00535B;
       color: white;
-      text-align: center;
-      padding: 60px 20px;
+      padding: 70px 20px;
+      overflow: hidden;
     }
+
+    .hero-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+    }
+
+    .hero-copy {
+      flex: 1 1 520px;
+      text-align: left;
+    }
+
     .hero h1 {
       font-size: 3rem;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
+
     .hero p {
       font-size: 1.4rem;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
+
+    .hero-media {
+      flex: 0 1 440px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .hero-image {
+      width: min(440px, 85vw);
+      transform: rotate(-12deg) translateY(6px);
+      filter: drop-shadow(0 24px 30px rgba(0, 0, 0, 0.38));
+      animation: floaty 4.5s ease-in-out infinite;
+      will-change: transform;
+    }
+
+    @keyframes floaty {
+      0%, 100% {
+        transform: rotate(-12deg) translateY(6px);
+      }
+      50% {
+        transform: rotate(-12deg) translateY(-10px);
+      }
+    }
+
     .btn-primary {
       background: #fff;
       color: #00535B;
@@ -38,13 +82,18 @@
       font-weight: bold;
       display: inline-block;
     }
+
     .btn-primary:hover {
       background: #e6e6e6;
     }
+
+    /* ================= SECTIONS ================= */
+
     .section {
       padding: 40px 20px;
       text-align: center;
     }
+
     .benefits {
       display: flex;
       justify-content: center;
@@ -52,6 +101,7 @@
       flex-wrap: wrap;
       margin-top: 20px;
     }
+
     .benefit-card {
       background: white;
       padding: 20px;
@@ -59,80 +109,125 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+
     .benefit-card h3 {
       color: #00535B;
     }
+
+    /* ================= FOOTER ================= */
+
     footer {
       background: #00535B;
       color: white;
       text-align: center;
       padding: 20px;
     }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 860px) {
+      .hero-wrap {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-media {
+        justify-content: center;
+      }
+
+      .hero-image {
+        width: min(360px, 92vw);
+        transform: rotate(-8deg);
+      }
+    }
   </style>
 </head>
+
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Campanha Mobilidade – Reis Magos 2026</h1>
-  <p>Oferta especial para a nossa comunidade de parceiros 🎁</p>
-  <a href="#cta" class="btn-primary">Quero a Minha Oferta!</a>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-wrap">
+      <div class="hero-copy">
+        <h1>Campanha Mobilidade – Reis Magos 2026</h1>
+        <p>Oferta especial para a nossa comunidade de parceiros 🎁</p>
+        <a href="#cta" class="btn-primary">Quero a Minha Oferta!</a>
+      </div>
 
-<!-- COMO FUNCIONA -->
-<section class="section">
-  <h2>Como Funciona?</h2>
-  <p>Adquira <strong>2 licenças anuais</strong> e receba <strong>1 hardware totalmente grátis!</strong></p>
-
-  <div class="benefits">
-    <div class="benefit-card">
-      <h3>✔️ Licenças Anuais</h3>
-      <p>Obtenha duas licenças com valor especial nesta campanha.</p>
+      <div class="hero-media">
+        <!-- IMAGEM DO TERMINAL -->
+        <img
+          src="Terminal POS com PTMOBILE em destaque.png"
+          alt="Terminal POS com PTMobile"
+          class="hero-image"
+        />
+      </div>
     </div>
-    <div class="benefit-card">
-      <h3>🎁 Hardware de Presente</h3>
-      <p>Receba um hardware grátis como agradecimento pela sua confiança.</p>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="section">
+    <h2>Como Funciona?</h2>
+    <p>Adquira <strong>2 licenças anuais</strong> e receba <strong>1 hardware totalmente grátis!</strong></p>
+
+    <div class="benefits">
+      <div class="benefit-card">
+        <h3>✔️ Licenças Anuais</h3>
+        <p>Obtenha duas licenças com valor especial nesta campanha.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>🎁 Hardware de Presente</h3>
+        <p>Receba um hardware grátis como agradecimento pela sua confiança.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>⚡ Exclusivo para Parceiros</h3>
+        <p>Oferta válida apenas para membros da comunidade de parceiros.</p>
+      </div>
     </div>
-    <div class="benefit-card">
-      <h3>⚡ Exclusivo para Parceiros</h3>
-      <p>Oferta válida apenas para membros da comunidade de parceiros.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- CTA -->
-<section id="cta" class="section" style="background:#eafef1;">
-  <h2>Comece Agora!</h2>
-  <p>Não perca esta oportunidade especial da campanha mobilidade - Reis Magos 2026.</p>
+  <!-- CTA -->
+  <section id="cta" class="section" style="background:#eafef1;">
+    <h2>Comece Agora!</h2>
+    <p>Não perca esta oportunidade especial da campanha mobilidade – Reis Magos 2026.</p>
 
-  <!-- BOTÃO PARA GOOGLE FORMS -->
-  <a href="https://forms.gle/UVLBcFWC8j6uaNgE8" target="_blank" class="btn-primary">
-    Adquirir Licenças
-  </a>
+    <a
+      href="https://forms.gle/UVLBcFWC8j6uaNgE8"
+      target="_blank"
+      class="btn-primary"
+    >
+      Adquirir Licenças
+    </a>
 
-  <p style="margin-top: 10px; font-size: 0.9rem; color: #555;">
-    Oferta válida por tempo limitado.
-  </p>
-</section>
+    <p style="margin-top: 10px; font-size: 0.9rem; color: #555;">
+      Oferta válida por tempo limitado.
+    </p>
+  </section>
 
-<!-- FAQ -->
-<section class="section">
-  <h2>Perguntas Frequentes</h2>
+  <!-- FAQ -->
+  <section class="section">
+    <h2>Perguntas Frequentes</h2>
 
-  <p><strong>Quem pode participar?</strong><br>
-    Todos os parceiros registados.</p>
+    <p><strong>Quem pode participar?</strong><br>
+      Todos os parceiros registados.</p>
 
-  <p><strong>Como recebo o hardware?</strong><br>
-    No email de encomenda das 2 licenças, colocar no assunto: <strong>campanha mobilidade - Reis Magos 2026</strong>.</p>
+    <p><strong>Como recebo o hardware?</strong><br>
+      No email de encomenda das 2 licenças, colocar no assunto:
+      <strong>campanha mobilidade – Reis Magos 2026</strong>.
+    </p>
 
-  <p><strong>Há custos adicionais?</strong><br>
-    Não — o hardware é totalmente gratuito com a compra das licenças.</p>
-</section>
+    <p><strong>Há custos adicionais?</strong><br>
+      Não — o hardware é totalmente gratuito com a compra das licenças.</p>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>&copy; 2026 Campanha Mobilidade – Reis Magos • Todos os direitos reservados</p>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Campanha Mobilidade – Reis Magos • Todos os direitos reservados</p>
+  </footer>
 
 </body>
 </html>
